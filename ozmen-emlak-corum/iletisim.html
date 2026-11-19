@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>İletişim | Özmen Emlak</title>
+<meta name="description" content="Özmen Emlak iletişim: Çorum Merkez ofis adresi, telefon, çalışma saatleri, WhatsApp, harita ve iletişim formu. Demo prototip.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="css/style.css?v=202611191407">
+</head>
+<body>
+<a class="skip-link" href="#icerik">İçeriğe geç</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Özmen Emlak ana sayfa">
+      <!-- logo buraya gelecek -->
+      <span class="brand-word">ÖZMEN EMLAK</span>
+    </a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="ana-menu"><span class="nav-toggle-icon" aria-hidden="true"></span>Menü</button>
+    <nav class="main-nav" id="ana-menu" aria-label="Ana menü">
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="ilanlar.html">İlanlar</a></li>
+        <li><a href="ilan.html">Öne Çıkan İlan</a></li>
+        <li><a href="yeni-projeler.html">Yeni Projeler</a></li>
+        <li><a href="ekibimiz.html">Ekibimiz</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="icerik">
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">İletişim</p>
+      <h1>Sizi dinlemek için buradayız</h1>
+      <p class="lead">Satılık, kiralık ya da değerleme: bir telefon, bir mesaj ya da bir ziyaret yeter.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="ilet-form-baslik">
+    <div class="container split split-top">
+      <div>
+        <h2 id="ilet-form-baslik">Bize yazın</h2>
+        <form class="form-grid" data-demo-form data-success="Teşekkürler! Mesajınız alındı; en kısa sürede size dönüş yapacağız. (Demo: hiçbir bilgi gönderilmedi.)">
+          <label class="field"><span>Ad soyad</span><input name="ad" required autocomplete="name"></label>
+          <label class="field"><span>Telefon</span><input name="telefon" type="tel" required autocomplete="tel" placeholder="05xx xxx xx xx"></label>
+          <label class="field"><span>E-posta</span><input name="eposta" type="email" autocomplete="email"></label>
+          <label class="field"><span>Konu</span>
+            <select name="konu"><option>Satılık ilan bilgisi</option><option>Kiralık ilan bilgisi</option><option>Evimi değerletmek istiyorum</option><option>Yeni projeler</option><option>Diğer</option></select>
+          </label>
+          <label class="field full"><span>Mesajınız</span><textarea name="mesaj" required></textarea></label>
+          <label class="check full"><input type="checkbox" required><span><a href="#kvkk">KVKK aydınlatma metnini</a> okudum, benimle iletişime geçilmesini kabul ediyorum.</span></label>
+          <div class="full"><button type="submit" class="btn btn-primary">Mesajı Gönder</button></div>
+        </form>
+      </div>
+      <aside class="contact-card" aria-label="Ofis bilgileri">
+        <p class="eyebrow" style="margin:0">Merkez ofis</p>
+        <h3 style="margin:0">Özmen Emlak</h3>
+        <p style="margin:0">Yeniyol Mah., Gazi Caddesi No: 42, Kat 2<br>Merkez / Çorum <span class="note">(kurgusal adres)</span></p>
+        <p style="margin:0"><a href="tel:+905550000001">0 (555) 000 00 01</a><br><a href="mailto:merhaba@ozmenemlak.com.tr">merhaba@ozmenemlak.com.tr</a></p>
+        <div>
+          <p class="eyebrow" style="margin:0 0 6px">Çalışma saatleri</p>
+          <p style="margin:0">Hafta içi: 09:00 – 19:00<br>Cumartesi: 10:00 – 17:00<br>Pazar: Kapalı</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-outline" href="tel:+905550000001">Ara</a>
+          <a class="btn btn-primary" href="https://wa.me/905550000001?text=Merhaba%2C%20%C3%96zmen%20Emlak%27tan%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="container" aria-labelledby="harita-baslik" style="padding-bottom:clamp(56px, 8vw, 112px)">
+    <h2 id="harita-baslik" class="visually-hidden">Ofis haritası</h2>
+    <div class="map" data-office-map role="region" aria-label="Özmen Emlak ofis konumu haritası"></div>
+    <p class="note" style="margin-top:12px">Konum prototip için gösterimliktir.</p>
+  </section>
+
+  <section class="section section-alt" id="kvkk" aria-labelledby="kvkk-baslik">
+    <div class="container">
+      <p class="eyebrow">Demo metin</p>
+      <h2 id="kvkk-baslik">KVKK Aydınlatma Metni</h2>
+      <div style="max-width:72ch">
+        <p class="note">Bu metin prototip için hazırlanmış örnektir; hukuki bir belge değildir. Gerçek kullanımda bir hukukçu tarafından düzenlenmelidir.</p>
+        <h3>Veri sorumlusu</h3>
+        <p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusu Özmen Emlak'tır (kurgusal firma, Yeniyol Mah., Gazi Caddesi No: 42, Kat 2, Merkez / Çorum).</p>
+        <h3>İşlenen veriler ve amaç</h3>
+        <p>Formlarda paylaştığınız ad soyad, telefon, e-posta ve mesaj bilgileriniz; talebinize dönüş yapmak, size uygun ilanları sunmak ve randevu planlamak amacıyla işlenir.</p>
+        <h3>Aktarım</h3>
+        <p>Verileriniz, hizmetin gerektirdiği ölçüde ilgili danışmanımızla ve yasal yükümlülükler gereği yetkili kurumlarla paylaşılabilir. Üçüncü kişilere pazarlama amacıyla verilmez.</p>
+        <h3>Haklarınız</h3>
+        <p>Kanunun 11. maddesi uyarınca verilerinizin işlenip işlenmediğini öğrenme, düzeltilmesini veya silinmesini isteme ve itiraz etme haklarına sahipsiniz. Başvurularınızı <a href="mailto:merhaba@ozmenemlak.com.tr">merhaba@ozmenemlak.com.tr</a> adresine iletebilirsiniz.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Özmen Emlak ana sayfa">
+          <!-- logo buraya gelecek -->
+          <span class="brand-word">ÖZMEN EMLAK</span>
+        </a>
+        <p>Çorum'da satılık ve kiralık konut, arsa ve ticari gayrimenkulde yerel danışmanlık.</p>
+      </div>
+      <div>
+        <h3>Sayfalar</h3>
+        <ul>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="ilanlar.html">İlanlar</a></li>
+          <li><a href="ilan.html">Öne Çıkan İlan</a></li>
+          <li><a href="yeni-projeler.html">Yeni Projeler</a></li>
+          <li><a href="ekibimiz.html">Ekibimiz</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Hizmetler</h3>
+        <ul>
+          <li><a href="ilanlar.html?durum=satilik">Satılık</a></li>
+          <li><a href="ilanlar.html?durum=kiralik">Kiralık</a></li>
+          <li><a href="ilanlar.html?tur=Arsa">Arsa</a></li>
+          <li><a href="ilanlar.html?tur=D%C3%BCkk%C3%A2n,Ofis,Depo">Ticari</a></li>
+          <li><a href="iletisim.html">Ücretsiz değerleme</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Bölgeler</h3>
+        <ul>
+          <li>Merkez</li>
+          <li>Sungurlu</li>
+          <li>Osmancık</li>
+          <li>İskilip</li>
+          <li>Kargı</li>
+        </ul>
+      </div>
+      <div>
+        <h3>İletişim</h3>
+        <ul>
+          <li>Yeniyol Mah., Gazi Caddesi No: 42, Kat 2<br>Merkez / Çorum (kurgusal adres)</li>
+          <li><a href="tel:+905550000001">0 (555) 000 00 01</a></li>
+          <li><a href="mailto:merhaba@ozmenemlak.com.tr">merhaba@ozmenemlak.com.tr</a></li>
+          <li>Hafta içi 09:00 – 19:00<br>Cumartesi 10:00 – 17:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Özmen Emlak · Yetki Belgesi No: Demo-1907001 · <a href="iletisim.html#kvkk">KVKK Aydınlatma Metni</a></p>
+      <p class="demo-note">Bu site bir demo prototiptir; ilanlar ve kişiler kurgusaldır.</p>
+    </div>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/905550000001?text=Merhaba%2C%20%C3%96zmen%20Emlak%27tan%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.6 7.4c.3-.5.6-.5.9-.5h.6c.2 0 .4.1.5.4l.8 1.9c.1.2 0 .5-.1.7l-.6.7c-.1.2-.1.4 0 .6.8 1.4 1.8 2.4 3.2 3.2.2.1.4.1.6 0l.7-.6c.2-.2.5-.2.7-.1l1.9.8c.3.1.4.3.4.5v.6c0 .4 0 .7-.6 1-.7.4-1.9.6-3.3-.1-2.2-1-4-2.8-5-5-.7-1.4-.5-2.6-.1-3.3z" fill="currentColor"/></svg>
+  <span>WhatsApp ile yazın</span>
+</a>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="js/data.js?v=202611191407"></script>
+<script src="js/main.js?v=202611191407"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Referans işler | Merdo Media</title>
+<meta name="description" content="Merdo Media referans işleri: web tasarım, otomasyon, video edit.">
+<style>
+:root{--zemin:#0a0a0b;--kart:#141416;--cizgi:#26272a;--yazi:#d9dbd4;--soluk:#8b8e87;--vurgu:#C8F135}
+*{box-sizing:border-box}
+body{margin:0;background:var(--zemin);color:var(--yazi);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit;text-decoration:none}
+.sar{max-width:1100px;margin:0 auto;padding:0 20px}
+header.sar{padding-top:56px;padding-bottom:40px;text-align:center}
+.logo{width:min(320px,70vw);height:auto}
+h1{margin:32px 0 8px;font-size:clamp(32px,6vw,52px);line-height:1.1;letter-spacing:-.02em}
+.alt{margin:0;color:var(--soluk)}
+.alt b{color:var(--vurgu);font-weight:400}
+.izgara{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;padding:16px 0 64px}
+.kart{display:flex;flex-direction:column;background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;overflow:hidden;transition:border-color .25s,transform .25s}
+.kart:hover{border-color:var(--vurgu);transform:translateY(-4px)}
+.kapak{aspect-ratio:16/10;overflow:hidden;background:#000}
+.kapak img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.kart:hover .kapak img{transform:scale(1.05)}
+.ic{padding:18px 20px 22px}
+.ic h2{margin:0 0 6px;font-size:20px}
+.ic p{margin:0 0 14px;color:var(--soluk);font-size:15px}
+.etiket{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:0;list-style:none}
+.etiket li{font-size:12px;padding:3px 10px;border:1px solid var(--cizgi);border-radius:99px;color:var(--vurgu)}
+.ac{color:var(--vurgu);font-weight:600;font-size:15px}
+footer{border-top:1px solid var(--cizgi);padding:28px 0 40px;text-align:center;color:var(--soluk);font-size:14px}
+footer a{color:var(--vurgu)}
+footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<header class="sar">
+  <img class="logo" src="merdo-logo.svg" alt="Merdo Media">
+  <h1>Referans işler</h1>
+  <p class="alt">web tasarım <b>•</b> otomasyon <b>•</b> video edit</p>
+</header>
+
+<main class="sar">
+  <div class="izgara">
+
+    <a class="kart" href="./ozmen-emlak/">
+      <div class="kapak"><img src="./ozmen-emlak/img/hero-1.jpg" alt="Özmen Emlak ana sayfa görseli" loading="lazy"></div>
+      <div class="ic">
+        <h2>Özmen Emlak</h2>
+        <p>Lüks emlak ajansı sitesi (örnek çalışma)</p>
+        <ul class="etiket"><li>emlak</li><li>statik site</li><li>mobil uyumlu</li></ul>
+        <span class="ac">Siteyi aç &rarr;</span>
+      </div>
+    </a>
+
+    <a class="kart" href="./ozmen-emlak-corum/">
+      <div class="kapak"><img src="./ozmen-emlak-corum/assets/video/hero-poster.jpg" alt="Özmen Emlak Çorum ana sayfa görseli" loading="lazy"></div>
+      <div class="ic">
+        <h2>Özmen Emlak · Çorum</h2>
+        <p>Video kapaklı, 7 sayfalık emlak sitesi: filtreli ilan arama, harita, ilan detayı ve kredi hesabı, ekip ve yeni projeler.</p>
+        <ul class="etiket"><li>emlak</li><li>video kapak</li><li>mobil uyumlu</li></ul>
+        <span class="ac">Siteyi aç &rarr;</span>
+      </div>
+    </a>
+
+    <!-- YENİ KART ŞABLONU: kopyala, yukarıya yapıştır, alanları doldur.
+    <a class="kart" href="./KLASOR-ADI/">
+      <div class="kapak"><img src="./KLASOR-ADI/img/KAPAK.jpg" alt="AÇIKLAMA" loading="lazy"></div>
+      <div class="ic">
+        <h2>BAŞLIK</h2>
+        <p>Kısa açıklama (örnek çalışma)</p>
+        <ul class="etiket"><li>etiket1</li><li>etiket2</li></ul>
+        <span class="ac">Siteyi aç &rarr;</span>
+      </div>
+    </a>
+    -->
+
+  </div>
+</main>
+
+<footer>
+  <a href="https://merdomedia.com">merdomedia.com</a>
+</footer>
+</body>
+</html>

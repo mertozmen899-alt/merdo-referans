@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Özmen Emlak | Çorum'da satılık ve kiralık evler</title>
+<meta name="description" content="Çorum'da satılık ve kiralık daire, müstakil ev, arsa ve dükkân ilanları. Demo prototip.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=202611191407">
+</head>
+<body>
+<a class="skip-link" href="#icerik">İçeriğe geç</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Özmen Emlak ana sayfa">
+      <!-- logo buraya gelecek -->
+      <span class="brand-word">ÖZMEN EMLAK</span>
+    </a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="ana-menu"><span class="nav-toggle-icon" aria-hidden="true"></span>Menü</button>
+    <nav class="main-nav" id="ana-menu" aria-label="Ana menü">
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="ilanlar.html">İlanlar</a></li>
+        <li><a href="ilan.html">Öne Çıkan İlan</a></li>
+        <li><a href="yeni-projeler.html">Yeni Projeler</a></li>
+        <li><a href="ekibimiz.html">Ekibimiz</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="icerik">
+
+  <!-- Kapak: tam ekran video (src'yi main.js ekran genişliğine göre seçer) -->
+  <section class="hero" aria-labelledby="hero-baslik">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/video/hero-poster.jpg" aria-hidden="true"></video>
+    <div class="container hero-inner">
+      <p class="eyebrow">Çorum · Satılık ve kiralık gayrimenkul</p>
+      <h1 id="hero-baslik">Çorum'da yeni eviniz sizi bekliyor</h1>
+      <p class="hero-sub">Buharaevler'den Kale'ye, şehrin her mahallesinde yerinde incelenmiş ilanlar ve sizi tanıyan bir danışman.</p>
+
+      <div class="search-box">
+        <div class="search-tabs" role="tablist" aria-label="Arama türü">
+          <button type="button" role="tab" class="tab-btn" data-mode="satilik" aria-selected="true">Satılık</button>
+          <button type="button" role="tab" class="tab-btn" data-mode="kiralik" aria-selected="false">Kiralık</button>
+          <button type="button" role="tab" class="tab-btn" data-mode="degerleme" aria-selected="false">Değerleme</button>
+        </div>
+        <form class="search-form" id="ara-form" action="ilanlar.html" method="get">
+          <input type="hidden" name="durum" value="satilik">
+          <label class="field"><span>Mahalle</span><input name="mahalle" list="mahalle-listesi" placeholder="Örn. Buharaevler" autocomplete="off"></label>
+          <datalist id="mahalle-listesi"></datalist>
+          <label class="field"><span>Tür</span>
+            <select name="tur"><option value="">Tümü</option><option>Daire</option><option>Müstakil</option><option>Villa</option><option>Arsa</option><option>Dükkân</option><option>Ofis</option><option>Depo</option></select>
+          </label>
+          <label class="field"><span>Oda</span>
+            <select name="oda"><option value="">Tümü</option><option>1+1</option><option>2+1</option><option>3+1</option><option>4+1</option><option value="5+">5+1 ve üzeri</option></select>
+          </label>
+          <button type="submit" class="btn btn-primary">İlan Ara</button>
+        </form>
+        <form class="search-form" id="degerleme-form" data-demo-form data-success="Teşekkürler! Değerleme talebiniz alındı; danışmanımız 24 saat içinde sizi arayacak. (Demo: hiçbir bilgi gönderilmedi.)" hidden>
+          <label class="field"><span>Mahalle</span><input name="mahalle" list="mahalle-listesi" placeholder="Evinizin mahallesi" required autocomplete="off"></label>
+          <label class="field"><span>Tür</span>
+            <select name="tur"><option>Daire</option><option>Müstakil</option><option>Villa</option><option>Arsa</option><option>Dükkân</option></select>
+          </label>
+          <label class="field"><span>Telefon</span><input name="telefon" type="tel" placeholder="05xx xxx xx xx" required autocomplete="tel"></label>
+          <button type="submit" class="btn btn-primary">Değerleme İste</button>
+        </form>
+      </div>
+    </div>
+    <button type="button" class="video-toggle">Videoyu durdur</button>
+  </section>
+
+  <!-- Öne Çıkan İlanlar: tek büyük slayt, ok + 7 sn zamanlayıcı (üzerine gelince durur) -->
+  <section class="section" aria-labelledby="one-cikan-baslik">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">Özmen seçkisi</p><h2 id="one-cikan-baslik">Öne Çıkan İlanlar</h2></div>
+        <a class="link-arrow" href="ilanlar.html">Tüm ilanlar</a>
+      </div>
+      <div class="slider" data-slider data-interval="7000" aria-roledescription="slayt gösterisi" aria-label="Öne çıkan ilanlar">
+        <div class="slider-stage">
+          <div data-render="featured"></div>
+          <div class="slider-nav">
+            <button type="button" class="slider-btn" data-prev aria-label="Önceki ilan"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button type="button" class="slider-btn" data-next aria-label="Sonraki ilan"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </div>
+        <p class="slider-count" data-count aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekmeli ilan kartları -->
+  <section class="section section-alt" aria-labelledby="sekme-baslik">
+    <div class="container" data-tabs>
+      <div class="section-head">
+        <div><p class="eyebrow">Yerel uzmanlık, doğru fiyat</p><h2 id="sekme-baslik">Sıradaki adım sizin</h2></div>
+      </div>
+      <div class="tab-list" role="tablist" aria-label="İlan grupları">
+        <button type="button" role="tab" class="tab-btn" aria-controls="t-yeni" aria-selected="true">Yeni Eklenenler</button>
+        <button type="button" role="tab" class="tab-btn" aria-controls="t-dusen">Fiyatı Düşenler</button>
+        <button type="button" role="tab" class="tab-btn" aria-controls="t-3m">3 Milyon TL Altı</button>
+        <button type="button" role="tab" class="tab-btn" aria-controls="t-mustakil">Bahçeli Müstakil</button>
+        <button type="button" role="tab" class="tab-btn" aria-controls="t-ticari">Yatırımlık İşyeri</button>
+      </div>
+      <div id="t-yeni" role="tabpanel" class="tab-panel">
+        <div class="grid grid-4" data-render="listings" data-preset="yeni" data-limit="4"></div>
+        <p class="tab-foot"><a class="link-arrow" href="ilanlar.html?sirala=yeni">Tüm yeni ilanlar</a></p>
+      </div>
+      <div id="t-dusen" role="tabpanel" class="tab-panel" hidden>
+        <div class="grid grid-4" data-render="listings" data-preset="dusen" data-limit="4"></div>
+        <p class="tab-foot"><a class="link-arrow" href="ilanlar.html?rozet=Fiyat%C4%B1%20D%C3%BC%C5%9Ft%C3%BC">Fiyatı düşen tüm ilanlar</a></p>
+      </div>
+      <div id="t-3m" role="tabpanel" class="tab-panel" hidden>
+        <div class="grid grid-4" data-render="listings" data-preset="alti3m" data-limit="4"></div>
+        <p class="tab-foot"><a class="link-arrow" href="ilanlar.html?durum=satilik&amp;max=3000000">3 milyon TL altındaki tüm ilanlar</a></p>
+      </div>
+      <div id="t-mustakil" role="tabpanel" class="tab-panel" hidden>
+        <div class="grid grid-4" data-render="listings" data-preset="mustakil" data-limit="4"></div>
+        <p class="tab-foot"><a class="link-arrow" href="ilanlar.html?tur=M%C3%BCstakil,Villa">Tüm müstakil ve villalar</a></p>
+      </div>
+      <div id="t-ticari" role="tabpanel" class="tab-panel" hidden>
+        <div class="grid grid-4" data-render="listings" data-preset="ticari" data-limit="4"></div>
+        <p class="tab-foot"><a class="link-arrow" href="ilanlar.html?durum=satilik&amp;tur=D%C3%BCkk%C3%A2n,Ofis,Depo">Tüm satılık işyerleri</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mahalle kutuları -->
+  <section class="section" aria-labelledby="mahalle-baslik">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">Mahalleler</p><h2 id="mahalle-baslik">Çorum'u mahalle mahalle tanıyın</h2></div>
+        <a class="link-arrow" href="ilanlar.html">Tüm ilanlar</a>
+      </div>
+      <div class="grid area-grid" data-render="areas"></div>
+    </div>
+  </section>
+
+  <!-- Çorum Rehberi bandı: sabit görsel, tıklamalı sekme (parallax yok) -->
+  <section class="band" data-tabs aria-labelledby="rehber-baslik">
+    <figure id="rehber-1" role="tabpanel" class="band-media">
+      <img src="assets/img/ai/rehber-saat-kulesi.jpg" alt="Çorum Saat Kulesi ve çevresindeki meydan" loading="lazy">
+      <figcaption>Saat Kulesi · şehrin buluşma noktası</figcaption>
+    </figure>
+    <figure id="rehber-2" role="tabpanel" class="band-media" hidden>
+      <img src="assets/img/ai/rehber-hidirlik.jpg" alt="Hıdırlık'tan Çorum şehir manzarası" loading="lazy">
+      <figcaption>Hıdırlık · yeşil alanlar ve şehir manzarası</figcaption>
+    </figure>
+    <div class="container band-inner">
+      <div class="band-card">
+        <p class="eyebrow">Çorum Rehberi</p>
+        <h2 id="rehber-baslik">Şehri bizimle keşfedin</h2>
+        <p>Saat Kulesi çevresindeki tarihî çarşıdan Hıdırlık'ın yeşil yamaçlarına, Hitit Üniversitesi kampüsünden bir saatlik mesafedeki Hattuşa'ya kadar Çorum'un her köşesini tanıyoruz. Hangi mahallenin size uygun olduğunu birlikte bulalım.</p>
+        <div class="tab-list tab-list-light" role="tablist" aria-label="Rehber görselleri">
+          <button type="button" role="tab" class="tab-btn" aria-controls="rehber-1" aria-selected="true">Saat Kulesi</button>
+          <button type="button" role="tab" class="tab-btn" aria-controls="rehber-2">Hıdırlık</button>
+        </div>
+        <a class="btn btn-primary" href="ilanlar.html">Mahallelerdeki ilanlar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ekip önizlemesi -->
+  <section class="section" aria-labelledby="ekip-baslik">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">Ekibimiz</p><h2 id="ekip-baslik">Sizi tanıyan danışmanlar</h2></div>
+        <a class="link-arrow" href="ekibimiz.html">Tüm ekibi tanıyın</a>
+      </div>
+      <div class="grid grid-4" data-render="agents" data-limit="4"></div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="section section-alt" aria-labelledby="blog-baslik">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">Rehber ve haberler</p><h2 id="blog-baslik">Ev alırken bilmeniz gerekenler</h2></div>
+      </div>
+      <div class="grid grid-3" data-render="blog"></div>
+    </div>
+  </section>
+
+  <!-- Bülten -->
+  <section class="section section-dark" aria-labelledby="bulten-baslik">
+    <div class="container newsletter">
+      <div>
+        <p class="eyebrow">İlan bülteni</p>
+        <h2 id="bulten-baslik">Yeni ilanları ilk siz görün</h2>
+        <p>Aradığınız mahallede yeni bir ilan çıktığında haftada en fazla bir e-postayla haber verelim.</p>
+      </div>
+      <div>
+        <form data-demo-form data-success="Teşekkürler! Bültene kaydınız alındı. (Demo: hiçbir bilgi gönderilmedi.)">
+          <div class="newsletter-row">
+            <label class="field"><span class="visually-hidden">E-posta adresiniz</span><input type="email" name="eposta" placeholder="E-posta adresiniz" required autocomplete="email"></label>
+            <button type="submit" class="btn btn-primary">Abone Ol</button>
+          </div>
+          <label class="check" style="color:inherit"><input type="checkbox" required> KVKK aydınlatma metnini okudum, ilan bültenine abone olmak istiyorum.</label>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Özmen Emlak ana sayfa">
+          <!-- logo buraya gelecek -->
+          <span class="brand-word">ÖZMEN EMLAK</span>
+        </a>
+        <p>Çorum'da satılık ve kiralık konut, arsa ve ticari gayrimenkulde yerel danışmanlık.</p>
+      </div>
+      <div>
+        <h3>Sayfalar</h3>
+        <ul>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="ilanlar.html">İlanlar</a></li>
+          <li><a href="ilan.html">Öne Çıkan İlan</a></li>
+          <li><a href="yeni-projeler.html">Yeni Projeler</a></li>
+          <li><a href="ekibimiz.html">Ekibimiz</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Hizmetler</h3>
+        <ul>
+          <li><a href="ilanlar.html?durum=satilik">Satılık</a></li>
+          <li><a href="ilanlar.html?durum=kiralik">Kiralık</a></li>
+          <li><a href="ilanlar.html?tur=Arsa">Arsa</a></li>
+          <li><a href="ilanlar.html?tur=D%C3%BCkk%C3%A2n,Ofis,Depo">Ticari</a></li>
+          <li><a href="iletisim.html">Ücretsiz değerleme</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Bölgeler</h3>
+        <ul>
+          <li>Merkez</li>
+          <li>Sungurlu</li>
+          <li>Osmancık</li>
+          <li>İskilip</li>
+          <li>Kargı</li>
+        </ul>
+      </div>
+      <div>
+        <h3>İletişim</h3>
+        <ul>
+          <li>Yeniyol Mah., Gazi Caddesi No: 42, Kat 2<br>Merkez / Çorum (kurgusal adres)</li>
+          <li><a href="tel:+905550000001">0 (555) 000 00 01</a></li>
+          <li><a href="mailto:merhaba@ozmenemlak.com.tr">merhaba@ozmenemlak.com.tr</a></li>
+          <li>Hafta içi 09:00 – 19:00<br>Cumartesi 10:00 – 17:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Özmen Emlak · Yetki Belgesi No: Demo-1907001 · <a href="iletisim.html#kvkk">KVKK Aydınlatma Metni</a></p>
+      <p class="demo-note">Bu site bir demo prototiptir; ilanlar ve kişiler kurgusaldır.</p>
+    </div>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/905550000001?text=Merhaba%2C%20%C3%96zmen%20Emlak%27tan%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.6 7.4c.3-.5.6-.5.9-.5h.6c.2 0 .4.1.5.4l.8 1.9c.1.2 0 .5-.1.7l-.6.7c-.1.2-.1.4 0 .6.8 1.4 1.8 2.4 3.2 3.2.2.1.4.1.6 0l.7-.6c.2-.2.5-.2.7-.1l1.9.8c.3.1.4.3.4.5v.6c0 .4 0 .7-.6 1-.7.4-1.9.6-3.3-.1-2.2-1-4-2.8-5-5-.7-1.4-.5-2.6-.1-3.3z" fill="currentColor"/></svg>
+  <span>WhatsApp ile yazın</span>
+</a>
+<script src="js/data.js?v=202611191407"></script>
+<script src="js/main.js?v=202611191407"></script>
+</body>
+</html>
